@@ -61,6 +61,25 @@
 (format t "~2%")
 
 
+(format t "## and")
+(print (and (= 1 1) (< 1 2)))
+(print (and (= 1 1) (> 1 2)))
+(print (and (= 1 2) (> 1 2)))
+(format t "~2%")
+
+
+(format t "## or")
+(print (or (= 1 1) (< 1 2)))
+(print (or (= 1 1) (> 1 2)))
+(print (or (= 1 2) (> 1 2)))
+(format t "~2%")
+
+
+(format t "## not")
+(print (not (= 1 1)))
+(print (not (= 1 2)))
+(format t "~2%")
+
 
 (format t "## if")
 (print (if (< 1 2) (+ 1 2) "hoge"))
