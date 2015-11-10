@@ -17,3 +17,14 @@
   (print a)) ; 100
 (print a) ; 1000
 (format t "~2%")
+
+
+; Set a special variable: (set 'var-name new-value)
+; Get a special variable: (symbol-value 'var-name)
+(format t "## symbol-value")
+(setq a 10)
+(let ((a 100))
+  (print a) ; 100
+  (print (symbol-value 'a)) ; 10
+)
+(format t "~2%")
