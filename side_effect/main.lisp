@@ -19,6 +19,14 @@
 (format t "~2%")
 
 
+(format t "## setf")
+(setq list '(a b c))
+(print list)
+(setf (car list) 480)
+(print list)
+(format t "~2%")
+
+
 ; Set a special variable: (set 'var-name new-value)
 ; Get a special variable: (symbol-value 'var-name)
 (format t "## symbol-value")
