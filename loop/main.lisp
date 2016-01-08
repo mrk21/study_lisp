@@ -50,3 +50,13 @@
       (setq result (* result n)))) ; looping S expression
 (print (fact2 5))
 (format t "~2%")
+
+
+; Filter
+(format t "## filter")
+(defun filter (pred ls)
+  (cond ((null ls) nil)
+        ((funcall pred (car ls))
+          (cons (car ls) (filter pred (cdr ls))))
+        (t (filter pred (cdr ls)))))
+(print (filter #'evenp '(1 2 3 4 5 6)))

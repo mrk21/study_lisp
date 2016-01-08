@@ -19,6 +19,7 @@
 (format t "~2%")
 
 
+; A `setf` can set a variable in current scope or the return value of a function.
 (format t "## setf")
 (setq list '(a b c))
 (print list)
