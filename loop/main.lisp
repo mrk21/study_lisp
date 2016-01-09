@@ -54,9 +54,12 @@
 
 ; Filter
 (format t "## filter")
-(defun filter (pred ls)
-  (cond ((null ls) nil)
-        ((funcall pred (car ls))
-          (cons (car ls) (filter pred (cdr ls))))
-        (t (filter pred (cdr ls)))))
+(defun filter (f list)
+  (cond
+    ((null list)
+      nil)
+    ((funcall f (car list))
+      (cons (car list) (filter f (cdr list))))
+    (t
+      (filter f (cdr list)))))
 (print (filter #'evenp '(1 2 3 4 5 6)))
